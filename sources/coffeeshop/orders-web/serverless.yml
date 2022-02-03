@@ -6,7 +6,7 @@ provider:
   runtime: provided
   endpointType: REGIONAL
   stage: dev
-  region: us-west-2
+  region: ap-northeast-1
   timeout: 10
   tracing:
     apiGateway: true
