@@ -123,6 +123,7 @@ export class CoffeeShopCodePipeline extends cdk.Stack {
                     },
                     post_build: {
                         commands: [
+                            'echo "${DOCKERHUB_PASSWORD}" | docker login -u "${DOCKERHUB_USERNAME}" --password-stdin'
                             'TAG=${CODEBUILD_RESOLVED_SOURCE_VERSION}',
                             'ACCOUNTID=$(aws sts get-caller-identity|jq -r ".Account")',
                             'LATEST="latest"',
