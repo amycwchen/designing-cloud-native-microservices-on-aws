@@ -68,7 +68,7 @@ export class CoffeeShopCodePipeline extends cdk.Stack {
         this.ecrRepository.addLifecycleRule({maxImageAge: cdk.Duration.days(40)});
 
         const defaultSource = codebuild.Source.gitHub({
-            owner: 'aws-samples',
+            owner: 'amycwchen',
             repo: 'designing-cloud-native-microservices-on-aws',
             webhook: true, // optional, default: true if `webhookFilteres` were provided, false otherwise
             webhookFilters: [
